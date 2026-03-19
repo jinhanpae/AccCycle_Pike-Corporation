@@ -14,13 +14,13 @@ const exerciseConfig = {
   // How to label the starting balances in the ledger:
   // "beginning"  → “Beginning balance”
   // "unadjusted" → “Unadjusted balance”
-  // startingBalanceLabelMode: "beginning", // default or undefinned
+  // startingBalanceLabelMode: "beginning", // default
   startingBalanceLabelMode: "unadjusted", // Pike
 
 
   // "exercise" (feedback & grading) or "test" (no feedback / grading)
-  // mode: "exercise",
-  mode: "test",
+  mode: "exercise",  // default
+  // mode: "test",
 
   useLoginScreen: true,
   loginTitle: "Accounting Cycle Practice",
