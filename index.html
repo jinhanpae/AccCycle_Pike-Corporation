@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accounting Cycle Practice – Pike Corporation</title>
+
+  <!-- Reuse existing styles -->
+  <link rel="stylesheet" href="ACStyles.css" />
+</head>
+<body>
+  <!-- Login overlay -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card">
+      <h1 id="login-title" class="login-title"></h1>
+      <h2 id="login-subtitle" class="login-subtitle"></h2>
+      <p id="login-prompt" class="login-prompt"></p>
+
+      <div class="login-field">
+        <label for="student-name" class="login-label">Name:</label>
+        <input
+          type="text"
+          id="student-name"
+          class="login-input"
+          placeholder="Your name (optional)"
+        />
+      </div>
+
+      <div class="login-field">
+        <label for="password-input" class="login-label">Password:</label>
+        <input
+          type="password"
+          id="password-input"
+          class="login-input"
+          placeholder="Enter password"
+        />
+        <div id="login-error" class="login-error"></div>
+      </div>
+
+      <button id="login-btn" class="login-button">
+        <span id="login-button-label"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main app -->
+  <div id="main-app" class="main-app hidden">
+    <div class="container">
+      <h1 id="app-title"></h1>
+      <div id="app-subtitle" class="subtitle"></div>
+
+      <!-- Section guide (update ranges to match Pike questions) -->
+      <div id="section-guide" class="section-guide">
+        <strong>Set A:</strong> Adjusting entries (Q1–7)&nbsp;
+        <strong>Set C:</strong> Closing entries (Q8–11)<br /><br />
+      </div>
+
+      <div id="tx-title" class="tx-title"></div>
+      <div id="tx-description" class="tx-description"></div>
+
+      <table class="journal-table">
+        <thead>
+          <tr>
+            <th style="width:14%;">Code</th>
+            <th style="width:40%;">Account</th>
+            <th style="width:23%;">Debit</th>
+            <th style="width:23%;">Credit</th>
+          </tr>
+        </thead>
+        <tbody id="journal-rows"></tbody>
+      </table>
+
+      <button id="add-row-btn" class="secondary">Add row</button>
+
+      <label id="no-entry-wrapper" class="no-entry-wrapper">
+        <input type="checkbox" id="no-entry-checkbox" />
+        No journal entry is required for this item.
+      </label>
+
+      <div class="controls">
+        <button id="prev-btn" class="secondary">Previous</button>
+        <button id="check-btn" class="primary">Submit journal entry</button>
+        <button id="next-btn" class="secondary">Next</button>
+        <button id="clear-btn" class="secondary">Clear entry</button>
+
+        <button id="open-chart-btn" class="secondary">
+          Open chart of accounts
+        </button>
+
+        <button id="tb-unadjusted-btn" class="secondary">
+          Unadjusted TB
+        </button>
+        <button id="tb-adjusted-btn" class="secondary">
+          Adjusted TB
+        </button>
+        <button id="tb-postclosing-btn" class="secondary">
+          Post-closing TB
+        </button>
+
+        <button id="ledger-btn" class="secondary">View general ledger</button>
+        <button id="reset-all-btn" class="secondary">Start over</button>
+      </div>
+
+      <div id="feedback" class="feedback"></div>
+      <div id="score-summary" class="score-summary"></div>
+      <footer id="app-footer" class="app-footer"></footer>
+    </div>
+  </div>
+
+  <!-- IMPORTANT: keep these filenames so ACApp.js finds the expected globals -->
+  <script src="ACConfig.js"></script>          <!-- contains Pike exerciseConfig -->
+  <script src="ACChartOfAccounts.js"></script> <!-- contains Pike chartOfAccounts -->
+  <script src="ACQuestions.js"></script>       <!-- contains Pike journalQuestions -->
+
+  <!-- Core app logic (unchanged) -->
+  <script src="ACApp.js"></script>
+</body>
+</html>
