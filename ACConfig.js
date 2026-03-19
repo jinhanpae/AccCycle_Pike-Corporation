@@ -19,8 +19,8 @@ const exerciseConfig = {
 
 
   // "exercise" (feedback & grading) or "test" (no feedback / grading)
-  mode: "exercise",
-  // mode: "test",
+  // mode: "exercise",
+  mode: "test",
 
   useLoginScreen: true,
   loginTitle: "Accounting Cycle Practice",
